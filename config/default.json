@@ -1,0 +1,17 @@
+{
+    "token": {
+        "secret": "testesecret"
+    },
+    "logger": {
+        "console": {
+            "level": "silly"
+        },
+        "file": {
+            "level": "error",
+            "path": "./musii-user-microservice.log"
+        }
+    },
+    "mongodb": {
+        "url": "mongodb://localhost:27017/musii"
+    }
+}
