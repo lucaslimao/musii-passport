@@ -1,6 +1,6 @@
 {
   "name": "musii-passport",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Authentication middleware in express",
   "main": "src/index.js",
   "scripts": {

@@ -38,9 +38,7 @@ const passport = async (req, res,next) => {
 
 }
 
-const authentication = () => {
-
-    const model = repository().get('User')
+const authentication = (model) => {
 
     logger.info('[Passport] Getting model ')
 
