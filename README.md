@@ -4,7 +4,9 @@ Authentication middleware in express
 ```javascript
 const { authentication } = require('musii-passport')
 
-authentication()
+const model = Model from mongoose
+
+authentication(model)
 ```
 ```javascript
 const { passport } = require('musii-passport')
