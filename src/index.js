@@ -1,8 +1,6 @@
 const utils = require('./utils/index')
 const logger = require('./utils/logger/index')
 
-let __model = undefined
-
 const passport = async (req, res,next) => {
 
     try {
@@ -18,10 +16,8 @@ const passport = async (req, res,next) => {
         }
     
         const authenticatedUserId = await utils.token().verify(token)
-    
-        const authenticatedUser = await __model.findOne({ _id : authenticatedUserId, active: 'S'})
-  
-        req.authenticatedUser = authenticatedUser
+
+        req.authenticatedUserId = authenticatedUserId
 
         logger.info('[Passport] Finish verify acess token.')
 
@@ -37,15 +33,4 @@ const passport = async (req, res,next) => {
 
 }
 
-const authentication = (model) => {
-
-    logger.info('[Passport] Getting model ')
-
-    __model = model
-
-}
-
-module.exports = {
-    authentication,
-    passport
-}
+module.exports = passport
