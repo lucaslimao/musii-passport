@@ -1,5 +1,4 @@
 const utils = require('./utils/index')
-const repository = require('./repository/index')
 const logger = require('./utils/logger/index')
 
 let __model = undefined
