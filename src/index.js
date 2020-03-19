@@ -1,5 +1,4 @@
-const utils = require('./utils/index')
-const logger = require('./utils/logger/index')
+const { logger, utils } = require('musii-node-helper')
 
 const passport = async (req, res,next) => {
 
